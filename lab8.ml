@@ -234,7 +234,8 @@ Exercise 10: Register the receieve_report listener to listen for the
 newswire event.
 ......................................................................*)
 
-(* .. *)
+let rr_id  =  
+  add_listener newswire receive_report  ;;
 
 (* Here are some new headlines to use for testing this part. *)
 
@@ -249,7 +250,9 @@ the news. (They've just queued up a bunch of listeners on the publish
 event instead.)
 ......................................................................*)
 
-(* .. *)
+fire_event newswire h4 ;;
+fire_event newswire h5 ;;
+fire_event newswire h6 ;;
 
 print_string "Moved to publication.\n" ;;
 
@@ -259,4 +262,4 @@ out the headlines. You should see the headlines printed after
 the line above. 
 ......................................................................*)
 
-(* .. *)
+fire_event publish h4 ;;
